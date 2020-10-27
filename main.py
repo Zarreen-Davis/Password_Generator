@@ -19,7 +19,7 @@ elif len(password_2) >20:
 lowercase_found = 0
 uppercase_found = 0
 digit_found = 0
-SpecialSym_found = 0
+Specialchar_found = 0
 
 for char in password_2:
   if char.islower():
@@ -29,12 +29,12 @@ for char in password_2:
   if char.isdigit():
     digit_found = 1
   if char=='$'or char=='#' or char=='%' or char=="!":
-    SpecialSym_found = 1
+    Specialchar_found = 1
 
-  if lowercase_found and uppercase_found and digit_found and SpecialSym_found:
+  if lowercase_found and uppercase_found and digit_found and Specialchar_found:
     break
 
-password_strength = lowercase_found + uppercase_found + digit_found + SpecialSym_found
+password_strength = lowercase_found + uppercase_found + digit_found + Specialchar_found
 
 if password_strength == 1:
   print("You have entered a weak password!")
